@@ -20,44 +20,47 @@
 
 </head>
 <body>
-  <main>
+  <main class="main-container">
     <section>
-      <div class="bg-image">
-        <img src="images/pattern-bg-desktop.png" alt="background image">
+      <div class="bg-image-container">
+        <img class="bg-image" src="images/pattern-bg-desktop.png" alt="background image">
       </div>
   
       <header class="header-container">
         <h1 class="header-text">IP Address Tracker</h1>
         <div class="input-container">
-          <input class="input-field" placeholder="Search for any IP address or domain" type="text">
+          <input onchange="" class="input-field" placeholder="Search for any IP address or domain" type="text">
           <button class="button"><image src="images/icon-arrow.svg" alt="arrow image"></button>
         </div>
       </header>
+
+      <section class="ip-location-details">
+        <div class="location-details-container">
+          <p>IP Address</p>
+          <h2 class="ip-address"></h2>
+        </div>
+  
+        <div class="location-details-container">
+          <p>Location</p>
+          <h2 class="location"></h2>
+        </div>
+  
+        <div class="location-details-container">
+          <p>Timezone</p>
+          <h2 class="utc"></h2>
+        </div>
+  
+        <div class="location-details-container">
+          <p>ISP</p>
+          <h2 class="isp"></h2>
+        </div>
+      </section>
     </section>
 
-    <section class="ip-location-details">
-      <div>
-        <p>IP Address</p>
-        <h2>192.212.174.101</h2>
-      </div>
 
-      <div>
-        <p>Location</p>
-        <h2>Brooklyn, NY 10001</h2>
-      </div>
-
-      <div>
-        <p>Timezone</p>
-        <h2>UTC-05:00</h2>
-      </div>
-
-      <div>
-        <p>ISP</p>
-        <h2>SpaceX Starlink</h2>
-      </div>
+    <section class="map-container">
+      <div id="map"></div>
     </section>
-
-    <div id="map"></div>
   </main>
 
      <!-- add offset value dynamically using the API -->
